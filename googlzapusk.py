@@ -17,7 +17,7 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
 
 # Используем новую бесплатную модель
-MODEL_NAME = "deepseek/deepseek-r1-0528-qwen3-8b:free"
+MODEL_NAME = "tencent/hunyuan-a13b-instruct:free"
 
 # Инициализация бота
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
