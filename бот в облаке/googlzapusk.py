@@ -7,10 +7,14 @@ import time
 import signal
 from gtts import gTTS
 import re
+from dotenv import load_dotenv
 
-# === Ваши реальные ключи ===
-TELEGRAM_TOKEN = "8085023273:AAEEprv8N5caD9Hr75CvNUbvYsOMD3MQfUE"
-OPENROUTER_KEY = "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"
+# Загружаем переменные из dev.env
+load_dotenv(os.path.join(os.path.dirname(__file__), 'dev.env'))
+
+# Получаем ключи из переменных окружения
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
 
 # Используем новую бесплатную модель
 MODEL_NAME = "deepseek/deepseek-r1-0528-qwen3-8b:free"
